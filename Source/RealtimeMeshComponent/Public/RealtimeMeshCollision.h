@@ -17,7 +17,7 @@ struct FRealtimeMeshCollisionConfiguration
 
 public:
 	FRealtimeMeshCollisionConfiguration()
-		: bUseComplexAsSimpleCollision(true)
+		: CollisionFlag(ECollisionTraceFlag::CTF_UseComplexAsSimple)
 		  , bUseAsyncCook(true)
 		  , bShouldFastCookMeshes(false)
 		  , bFlipNormals(false)
@@ -26,8 +26,8 @@ public:
 	}
 
 	UPROPERTY(Category="RealtimeMesh|Collision", EditAnywhere, BlueprintReadWrite)
-	bool bUseComplexAsSimpleCollision;
-
+	TEnumAsByte<enum ECollisionTraceFlag> CollisionFlag;
+	
 	UPROPERTY(Category="RealtimeMesh|Collision", EditAnywhere, BlueprintReadWrite)
 	bool bUseAsyncCook;
 

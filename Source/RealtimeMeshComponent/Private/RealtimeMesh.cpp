@@ -389,7 +389,7 @@ void URealtimeMesh::InitiateCollisionUpdate(const TSharedRef<TPromise<ERealtimeM
 
 	NewBodySetup->bGenerateMirroredCollision = false;
 	NewBodySetup->bDoubleSidedGeometry = true;
-	NewBodySetup->CollisionTraceFlag = CollisionUpdate->Config.bUseComplexAsSimpleCollision ? CTF_UseComplexAsSimple : CTF_UseDefault;
+	NewBodySetup->CollisionTraceFlag = CollisionUpdate->Config.CollisionFlag;
 
 	// Abort any pending update.
 	if (PendingBodySetup)

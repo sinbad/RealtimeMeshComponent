@@ -68,7 +68,7 @@ void ARealtimeMeshBasicUsageActor::OnGenerateMesh_Implementation()
 	RealtimeMesh->SetSimpleGeometry(SimpleGeometry);
 	
 	FRealtimeMeshCollisionConfiguration CollisionConfig;
-	CollisionConfig.bUseComplexAsSimpleCollision = false;
+	CollisionConfig.CollisionFlag = CTF_UseDefault;
 	RealtimeMesh->SetCollisionConfig(CollisionConfig);
 	
 }

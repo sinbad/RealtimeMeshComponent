@@ -61,7 +61,7 @@ using namespace RealtimeMesh::CollisionHelpers;
 
 FArchive& operator<<(FArchive& Ar, FRealtimeMeshCollisionConfiguration& Config)
 {
-	Ar << Config.bUseComplexAsSimpleCollision;
+	Ar << Config.CollisionFlag;
 	Ar << Config.bUseAsyncCook;
 	Ar << Config.bShouldFastCookMeshes;
 
